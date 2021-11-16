@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class starter {
 	//comb sort method
 	//comb sort acts like bubble sort except instead of a fixed comparing distance of 1, comb sort starts by comparing
@@ -24,7 +26,38 @@ public class starter {
 	}
 	/*****    if you recognize this code it's because it's recycled from previous hw
 	******/
+	//funny suggestion by gian
+	public static void p(String a) {
+		System.out.print(a);  //System.out.println(x); = p(x+"\n");
+							  //cry about it
+	}
+	public static void p(int a) {
+		System.out.print(a);  //necessary
+	}
+	//funny idea by me
+	public static void dp(String inp, boolean print) {
+		//another way to print, "dp" stands for "do print"
+		if(print != !print) {
+			System.out.print(inp);
+		}
+		else if(print = !false) {
+			System.out.print(inp);
+		}
+		else {System.out.print(inp);}
+	}
 	public static void main(String args[]) {
-		
+		Random rand = new Random();
+		int[] array = new int[20];
+		int check = rand.nextInt(10)+1;
+		for(int i=0;i<array.length;i++) {
+			array[i] = rand.nextInt(10)+1;
+		}
+		p("[ ");
+		for(int i=0;i<array.length;i++) {
+			p(array[i]);
+			if(i<array.length-1) {p(", ");}
+		}
+		p(" ]\n\n");
+		p("Duplicates of "+check+": ");
 	}
 }
